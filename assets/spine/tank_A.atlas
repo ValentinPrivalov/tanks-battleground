@@ -1,0 +1,34 @@
+
+tank_A.png
+size: 251,310
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Hulls_Color_A/Hull_01
+  rotate: true
+  xy: 2, 142
+  size: 166, 247
+  orig: 256, 256
+  offset: 45, 0
+  index: -1
+Tracks/Track_1_A
+  rotate: true
+  xy: 2, 98
+  size: 42, 246
+  orig: 42, 246
+  offset: 0, 0
+  index: -1
+Weapon_Color_A/Gun_01_A
+  rotate: true
+  xy: 110, 60
+  size: 36, 118
+  orig: 36, 118
+  offset: 0, 0
+  index: -1
+Weapon_Color_A/Gun_01_B
+  rotate: true
+  xy: 2, 2
+  size: 94, 106
+  orig: 94, 106
+  offset: 0, 0
+  index: -1

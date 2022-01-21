@@ -1,0 +1,9 @@
+{
+  "name": "tanks-battleground",
+  "author": "Valentyn Pryvalov",
+  "license": "ISC",
+  "scripts": {
+    "watch": "webpack --mode=development --env manifest=./package.json -c ./../../core/build-tool/webpack.config.js --watch --progress"
+  },
+  "private": true
+}

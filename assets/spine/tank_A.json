@@ -1,0 +1,162 @@
+{
+  "skeleton": {
+    "hash": "NvSoWTnXtoPaVPP9PkJozy6EgaU",
+    "spine": "3.8.76",
+    "x": -128,
+    "y": -140.3,
+    "width": 256,
+    "height": 270.6,
+    "images": "C:/Project/creator/games/tanks-battleground/assets/images/",
+    "audio": ""
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "turret",
+      "parent": "root",
+      "y": -38.16
+    },
+    {
+      "name": "gun",
+      "parent": "turret",
+      "y": 38.16
+    },
+    {
+      "name": "tracks",
+      "parent": "root"
+    }
+  ],
+  "slots": [
+    {
+      "name": "track_right",
+      "bone": "tracks",
+      "attachment": "Tracks/Track_1_A"
+    },
+    {
+      "name": "track_left",
+      "bone": "tracks",
+      "attachment": "Tracks/Track_1_A"
+    },
+    {
+      "name": "body",
+      "bone": "root",
+      "attachment": "Hulls_Color_A/Hull_01"
+    },
+    {
+      "name": "gun",
+      "bone": "gun",
+      "attachment": "Weapon_Color_A/Gun_01_A"
+    },
+    {
+      "name": "turret",
+      "bone": "turret",
+      "attachment": "Weapon_Color_A/Gun_01_B"
+    },
+    {
+      "name": "fire",
+      "bone": "gun",
+      "attachment": "fire"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "gun": {
+          "Weapon_Color_A/Gun_01_A": {
+            "x": 0.15,
+            "y": 69.84,
+            "width": 36,
+            "height": 118
+          }
+        },
+        "body": {
+          "Hulls_Color_A/Hull_01": {
+            "width": 256,
+            "height": 256
+          }
+        },
+        "track_right": {
+          "Tracks/Track_1_A": {
+            "x": 68.3,
+            "y": -5,
+            "scaleX": 1.1,
+            "scaleY": 1.1,
+            "width": 42,
+            "height": 246
+          }
+        },
+        "turret": {
+          "Weapon_Color_A/Gun_01_B": {
+            "width": 94,
+            "height": 106
+          }
+        },
+        "fire": {
+          "fire": {
+            "type": "point",
+            "y": 129.12
+          }
+        },
+        "track_left": {
+          "Tracks/Track_1_A": {
+            "x": -68.26,
+            "y": -5,
+            "scaleX": 1.1,
+            "scaleY": 1.1,
+            "width": 42,
+            "height": 246
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "shoot": {
+      "bones": {
+        "gun": {
+          "translate": [
+            {},
+            {
+              "time": 0.1667,
+              "y": -10.76
+            },
+            {
+              "time": 0.2667
+            }
+          ]
+        }
+      }
+    },
+    "tracks": {
+      "bones": {
+        "tracks": {
+          "translate": [
+            {
+              "curve": "stepped"
+            },
+            {
+              "time": 0.1,
+              "y": -8.37,
+              "curve": "stepped"
+            },
+            {
+              "time": 0.2
+            }
+          ],
+          "scale": [
+            {
+              "curve": "stepped"
+            },
+            {
+              "time": 0.1,
+              "y": -1
+            }
+          ]
+        }
+      }
+    }
+  }
+}
