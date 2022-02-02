@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es6",
+      "es2017"
+    ],
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "pixi.js",
+      "pixi-spine"
+    ],
+    "noEmit": false
+  },
+  "include": [
+    "./../../creator/core/**/*.ts",
+    "./modules/**/*.ts"
+  ],
+  "exclude": ["./node_modules"]
+}

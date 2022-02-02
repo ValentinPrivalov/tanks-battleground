@@ -1,9 +1,9 @@
-import {AbstractView, ITransitionSettings} from "../../../../../core/lib/mvc/view";
-import {Button} from "../../../../../core/lib/pixi/button";
-import {PointerEvents} from "../../../../../core/global/pointer-events";
+import {AbstractView, ITransitionSettings} from "../../../../../creator/core/lib/mvc/view";
+import {Button} from "../../../../../creator/core/lib/pixi/button";
+import {PointerEvents} from "../../../../../creator/core/global/pointer-events";
 import {MenuNames} from "../global/menu-names";
 import {MenuSignals} from "../global/menu-signals";
-import {Layer} from "../../../../../core/lib/pixi/layer";
+import {Layer} from "../../../../../creator/core/lib/pixi/layer";
 
 export class MenuView extends AbstractView {
     protected startButton: Button;

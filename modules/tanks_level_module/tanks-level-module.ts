@@ -1,7 +1,7 @@
 import {TanksLevelView} from "./view/tanks-level-view";
 import {TanksLevelController} from "./controller/tanks-level-controller";
 import {TanksLevelModel} from "./model/tanks-level-model";
-import {AbstractModule} from "../../../../core/lib/mvc/module";
+import {AbstractModule} from "../../../../creator/core/lib/mvc/module";
 import {TanksViews} from "../global/tanks-names";
 
 export class TanksLevelModule extends AbstractModule {

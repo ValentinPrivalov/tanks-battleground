@@ -1,4 +1,4 @@
-import {AbstractModel} from "../../../../../core/lib/mvc/model";
+import {AbstractModel} from "../../../../../creator/core/lib/mvc/model";
 import {TanksLevelNames} from "../global/tanks-level-names";
 
 export class TanksLevelModel extends AbstractModel {

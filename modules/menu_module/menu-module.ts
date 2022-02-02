@@ -1,5 +1,5 @@
-import {AbstractModule} from "../../../../core/lib/mvc/module";
-import {Names} from "../../../../core/global/names";
+import {AbstractModule} from "../../../../creator/core/lib/mvc/module";
+import {Names} from "../../../../creator/core/global/names";
 import {MenuController} from "./controller/menu-controller";
 import {MenuView} from "./view/menu-view";
 

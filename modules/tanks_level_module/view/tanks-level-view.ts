@@ -1,18 +1,18 @@
-import {IKeyboardEvent} from "../../../../../core/classes/modules/setup_module/static/setup-interfaces";
+import {IKeyboardEvent} from "../../../../../creator/core/classes/modules/setup_module/static/setup-interfaces";
 import {IVelocity, IZoomEdges} from "../global/tanks-level-interfaces";
 import gsap from "gsap";
-import {AbstractView} from "../../../../../core/lib/mvc/view";
+import {AbstractView} from "../../../../../creator/core/lib/mvc/view";
 import {TanksLevelNames} from "../global/tanks-level-names";
-import {Layer} from "../../../../../core/lib/pixi/layer";
-import {Button} from "../../../../../core/lib/pixi/button";
-import {PointerEvents} from "../../../../../core/global/pointer-events";
+import {Layer} from "../../../../../creator/core/lib/pixi/layer";
+import {Button} from "../../../../../creator/core/lib/pixi/button";
+import {PointerEvents} from "../../../../../creator/core/global/pointer-events";
 import {TanksLevelSignals} from "../global/tanks-level-signals";
 import {InteractionEvent, LoaderResource, Point} from "pixi.js";
-import {Names} from "../../../../../core/global/names";
-import {GraphicsModel} from "../../../../../core/classes/modules/graphics_module/model/graphics-model";
-import {ISceneSize} from "../../../../../core/classes/modules/graphics_module/static/graphics-interfaces";
-import {ITiledPoint} from "../../../../../core/lib/tiled/tiled-interfaces";
-import {KeyboardMap} from "../../../../../core/classes/modules/setup_module/static/keyboard-map";
+import {Names} from "../../../../../creator/core/global/names";
+import {GraphicsModel} from "../../../../../creator/core/classes/modules/graphics_module/model/graphics-model";
+import {ISceneSize} from "../../../../../creator/core/classes/modules/graphics_module/static/graphics-interfaces";
+import {ITiledPoint} from "../../../../../creator/core/lib/tiled/tiled-interfaces";
+import {KeyboardMap} from "../../../../../creator/core/classes/modules/setup_module/static/keyboard-map";
 
 export class TanksLevelView extends AbstractView {
     protected map: Layer;
