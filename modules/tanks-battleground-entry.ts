@@ -1,17 +1,17 @@
-import { Entry } from '../../creator/core/classes/entry';
-import { Names } from '../../creator/core/global/names';
-import { Configs } from '../../creator/core/lib/services/configs';
-import { LoadingNames } from '../../creator/core/classes/modules/loading_module/static/loading-names';
-import { IMapPath } from '../../creator/core/classes/modules/loading_module/static/loading-interfaces';
-import { MenuModule } from './modules/menu_module/menu-module';
-import { StateManager } from '../../creator/core/lib/services/state-manager';
-import { TanksStates } from './modules/global/tanks-states';
-import { States } from '../../creator/core/global/states';
-import { TanksModules } from './modules/global/tanks-names';
-import { TanksLevelModule } from './modules/tanks_level_module/tanks-level-module';
+import { Entry } from '../../../creator/core/classes/modules/entry';
+import { Names } from '../../../creator/core/global/names';
+import { Configs } from '../../../creator/core/lib/services/configs';
+import { LoadingNames } from '../../../creator/core/classes/modules/loading_module/static/loading-names';
+import { IMapPath } from '../../../creator/core/classes/modules/loading_module/static/loading-interfaces';
+import { MenuModule } from './menu_module/menu-module';
+import { StateManager } from '../../../creator/core/lib/services/state-manager';
+import { TanksStates } from './global/tanks-states';
+import { States } from '../../../creator/core/global/states';
+import { TanksModules } from './global/tanks-names';
+import { TanksLevelModule } from './tanks_level_module/tanks-level-module';
 
-class TanksBattleground extends Entry {
-    protected _gameVersion: string = '0.2.0';
+class TanksBattlegroundEntry extends Entry {
+    protected _gameVersion: string = '0.2.1';
 
     protected initModules(): void {
         super.initModules();
@@ -36,5 +36,5 @@ class TanksBattleground extends Entry {
 }
 
 window.onload = () => {
-    (window as any).Entry = new TanksBattleground();
+    (window as any).Entry = new TanksBattlegroundEntry();
 };
