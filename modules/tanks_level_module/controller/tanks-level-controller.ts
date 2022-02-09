@@ -1,27 +1,24 @@
-import {TanksLevelView} from "../view/tanks-level-view";
-import {TanksStates} from "../../global/tanks-states";
-import {ITanksLevelData, TanksLevelModel} from "../model/tanks-level-model";
-import {AbstractController} from "../../../../../creator/core/lib/mvc/controller";
-import {TanksLevelSignals} from "../global/tanks-level-signals";
-import {States} from "../../../../../creator/core/global/states";
-import {Notifications} from "../../../../../creator/core/global/notifications";
-import {
-    IKeyboardEvent,
-    IWindowEventData
-} from "../../../../../creator/core/classes/modules/setup_module/static/setup-interfaces";
-import {WindowEventNames} from "../../../../../creator/core/classes/modules/setup_module/static/window-event-names";
-import {KeyboardMap} from "../../../../../creator/core/classes/modules/setup_module/static/keyboard-map";
+import { TanksLevelView } from '../view/tanks-level-view';
+import { TanksStates } from '../../global/tanks-states';
+import { ITanksLevelData, TanksLevelModel } from '../model/tanks-level-model';
+import { AbstractController } from '../../../../../creator/core/lib/mvc/controller';
+import { TanksLevelSignals } from '../global/tanks-level-signals';
+import { States } from '../../../../../creator/core/global/states';
+import { Notifications } from '../../../../../creator/core/global/notifications';
+import { IKeyboardEvent, IWindowEventData } from '../../../../../creator/core/classes/modules/setup_module/static/setup-interfaces';
+import { WindowEventNames } from '../../../../../creator/core/classes/modules/setup_module/static/window-event-names';
+import { KeyboardMap } from '../../../../../creator/core/classes/modules/setup_module/static/keyboard-map';
 
 export class TanksLevelController extends AbstractController {
-    get view(): TanksLevelView {
+    protected get view(): TanksLevelView {
         return this._view as TanksLevelView;
     }
 
-    get model(): TanksLevelModel {
+    protected get model(): TanksLevelModel {
         return this._model as TanksLevelModel;
     }
 
-    public onRegister() {
+    public onRegister(): void {
         super.onRegister();
         this.sendNotification(Notifications.REGISTER_WINDOW_EVENT, {
             eventName: WindowEventNames.MOUSE_WHEEL,

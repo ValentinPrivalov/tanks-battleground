@@ -14,7 +14,16 @@
         "plugin:prettier/recommended"
     ],
     "rules": {
-        "prettier/prettier": ["error", {"singleQuote": true, "tabWidth": 4, "trailingComma": "none"}],
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": true,
+                "tabWidth": 4,
+                "trailingComma": "none",
+                "printWidth": 150,
+                "arrowParens": "avoid"
+            }
+        ],
         "prefer-const": "error",
         "no-useless-escape": "off",
         "lines-between-class-members": "off",
@@ -24,6 +33,19 @@
             {
                 "allowExpressions": true,
                 "allowTypedFunctionExpressions": true
+            }
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+            "error",
+            {
+                "accessibility": "explicit",
+                "overrides": {
+                    "accessors": "explicit",
+                    "constructors": "no-public",
+                    "methods": "explicit",
+                    "properties": "explicit",
+                    "parameterProperties": "explicit"
+                }
             }
         ],
         "@typescript-eslint/ban-types": "off",
@@ -46,6 +68,7 @@
         "@typescript-eslint/prefer-ts-expect-error": "error",
         "unused-imports/no-unused-imports": "error",
         "no-useless-constructor": "off",
+        "arrow-parens": ["error", "as-needed"],
         "@typescript-eslint/no-useless-constructor": ["error"]
     },
     "env": {

@@ -1,4 +1,4 @@
 export class TanksStates {
-    static LEVEL: string = 'LEVEL';
-    static PAUSE_GAME: string = 'PAUSE_GAME';
+    public static LEVEL: string = 'LEVEL';
+    public static PAUSE_GAME: string = 'PAUSE_GAME';
 }

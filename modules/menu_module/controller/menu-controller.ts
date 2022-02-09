@@ -1,19 +1,19 @@
-import {AbstractController} from "../../../../../creator/core/lib/mvc/controller";
-import {States} from "../../../../../creator/core/global/states";
-import {MenuView} from "../view/menu-view";
-import {MenuSignals} from "../global/menu-signals";
-import {TanksStates} from "../../global/tanks-states";
-import {Notifications} from "../../../../../creator/core/global/notifications";
-import {IWindowEventData} from "../../../../../creator/core/classes/modules/setup_module/static/setup-interfaces";
-import {KeyboardMap} from "../../../../../creator/core/classes/modules/setup_module/static/keyboard-map";
-import {WindowEventNames} from "../../../../../creator/core/classes/modules/setup_module/static/window-event-names";
+import { AbstractController } from '../../../../../creator/core/lib/mvc/controller';
+import { States } from '../../../../../creator/core/global/states';
+import { MenuView } from '../view/menu-view';
+import { MenuSignals } from '../global/menu-signals';
+import { TanksStates } from '../../global/tanks-states';
+import { Notifications } from '../../../../../creator/core/global/notifications';
+import { IWindowEventData } from '../../../../../creator/core/classes/modules/setup_module/static/setup-interfaces';
+import { KeyboardMap } from '../../../../../creator/core/classes/modules/setup_module/static/keyboard-map';
+import { WindowEventNames } from '../../../../../creator/core/classes/modules/setup_module/static/window-event-names';
 
 export class MenuController extends AbstractController {
-    get view(): MenuView {
+    protected get view(): MenuView {
         return this._view as MenuView;
     }
 
-    public onRegister() {
+    public onRegister(): void {
         super.onRegister();
         this.sendNotification(Notifications.REGISTER_WINDOW_EVENT, {
             eventName: WindowEventNames.KEY_DOWN,

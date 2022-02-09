@@ -1,2 +1,1 @@
-export class TanksNotifications {
-}
+export class TanksNotifications {}

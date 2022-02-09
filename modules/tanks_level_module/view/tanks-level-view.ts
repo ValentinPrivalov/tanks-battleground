@@ -1,18 +1,18 @@
-import {IKeyboardEvent} from "../../../../../creator/core/classes/modules/setup_module/static/setup-interfaces";
-import {IVelocity, IZoomEdges} from "../global/tanks-level-interfaces";
-import gsap from "gsap";
-import {AbstractView} from "../../../../../creator/core/lib/mvc/view";
-import {TanksLevelNames} from "../global/tanks-level-names";
-import {Layer} from "../../../../../creator/core/lib/pixi/layer";
-import {Button} from "../../../../../creator/core/lib/pixi/button";
-import {PointerEvents} from "../../../../../creator/core/global/pointer-events";
-import {TanksLevelSignals} from "../global/tanks-level-signals";
-import {InteractionEvent, LoaderResource, Point} from "pixi.js";
-import {Names} from "../../../../../creator/core/global/names";
-import {GraphicsModel} from "../../../../../creator/core/classes/modules/graphics_module/model/graphics-model";
-import {ISceneSize} from "../../../../../creator/core/classes/modules/graphics_module/static/graphics-interfaces";
-import {ITiledPoint} from "../../../../../creator/core/lib/tiled/tiled-interfaces";
-import {KeyboardMap} from "../../../../../creator/core/classes/modules/setup_module/static/keyboard-map";
+import { IKeyboardEvent } from '../../../../../creator/core/classes/modules/setup_module/static/setup-interfaces';
+import { IVelocity, IZoomEdges } from '../global/tanks-level-interfaces';
+import gsap from 'gsap';
+import { AbstractView } from '../../../../../creator/core/lib/mvc/view';
+import { TanksLevelNames } from '../global/tanks-level-names';
+import { Layer } from '../../../../../creator/core/lib/pixi/layer';
+import { Button } from '../../../../../creator/core/lib/pixi/button';
+import { PointerEvents } from '../../../../../creator/core/global/pointer-events';
+import { TanksLevelSignals } from '../global/tanks-level-signals';
+import { InteractionEvent, Point } from 'pixi.js';
+import { Names } from '../../../../../creator/core/global/names';
+import { GraphicsModel } from '../../../../../creator/core/classes/modules/graphics_module/model/graphics-model';
+import { ISceneSize } from '../../../../../creator/core/classes/modules/graphics_module/static/graphics-interfaces';
+import { ITiledPoint } from '../../../../../creator/core/lib/tiled/tiled-interfaces';
+import { KeyboardMap } from '../../../../../creator/core/classes/modules/setup_module/static/keyboard-map';
 
 export class TanksLevelView extends AbstractView {
     protected map: Layer;
@@ -25,12 +25,13 @@ export class TanksLevelView extends AbstractView {
         minScale: 0.3,
         maxScale: 1
     };
+
     protected initialZoom = 0.5;
     protected dragging: boolean = false;
     protected pointerPos: Point = null;
     protected beforeDragMapPos: Point = null;
     protected sceneSize: ISceneSize;
-    protected mapVelocity: IVelocity = {vx: 0, vy: 0, speed: 7};
+    protected mapVelocity: IVelocity = { vx: 0, vy: 0, speed: 7 };
 
     public onCreated(): void {
         super.onCreated();
@@ -90,7 +91,7 @@ export class TanksLevelView extends AbstractView {
         });
     }
 
-    public disableInteractive() {
+    public disableInteractive(): void {
         super.disableInteractive();
         this.menuButton.enable = false;
         this.mapVelocity.vx = 0;
@@ -116,7 +117,7 @@ export class TanksLevelView extends AbstractView {
         this.zoomTween = gsap.to(this.map.scale, {
             duration: 0.3,
             x: scale,
-            y: scale,
+            y: scale
         });
     }
 
@@ -126,12 +127,8 @@ export class TanksLevelView extends AbstractView {
         const rightBound: number = this.getMapBounds(TanksLevelNames.RIGHT_BOUND);
         const bottomBound: number = this.getMapBounds(TanksLevelNames.BOTTOM_BOUND);
 
-        const pointX: number = x < leftBound ? leftBound :
-            x > rightBound ? rightBound :
-                x;
-        const pointY: number = y < topBound ? topBound :
-            y > bottomBound ? bottomBound :
-                y;
+        const pointX: number = x < leftBound ? leftBound : x > rightBound ? rightBound : x;
+        const pointY: number = y < topBound ? topBound : y > bottomBound ? bottomBound : y;
 
         this.map.pivot.set(pointX, pointY);
     }
@@ -178,7 +175,7 @@ export class TanksLevelView extends AbstractView {
         return value;
     }
 
-    protected onUpdate() {
+    protected onUpdate(): void {
         super.onUpdate();
         const x: number = this.map.pivot.x + this.mapVelocity.vx;
         const y: number = this.map.pivot.y + this.mapVelocity.vy;

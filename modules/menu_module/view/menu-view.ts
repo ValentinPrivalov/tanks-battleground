@@ -1,16 +1,16 @@
-import {AbstractView, ITransitionSettings} from "../../../../../creator/core/lib/mvc/view";
-import {Button} from "../../../../../creator/core/lib/pixi/button";
-import {PointerEvents} from "../../../../../creator/core/global/pointer-events";
-import {MenuNames} from "../global/menu-names";
-import {MenuSignals} from "../global/menu-signals";
-import {Layer} from "../../../../../creator/core/lib/pixi/layer";
+import { AbstractView, ITransitionSettings } from '../../../../../creator/core/lib/mvc/view';
+import { Button } from '../../../../../creator/core/lib/pixi/button';
+import { PointerEvents } from '../../../../../creator/core/global/pointer-events';
+import { MenuNames } from '../global/menu-names';
+import { MenuSignals } from '../global/menu-signals';
+import { Layer } from '../../../../../creator/core/lib/pixi/layer';
 
 export class MenuView extends AbstractView {
     protected startButton: Button;
     protected transitionSettings: ITransitionSettings = {
         fadeInTime: 0.2,
         fadeOutTime: 0.2
-    }
+    };
 
     public onCreated(): void {
         super.onCreated();

@@ -1,6 +1,6 @@
 export interface IZoomEdges {
-    minScale: number,
-    maxScale: number
+    minScale: number;
+    maxScale: number;
 }
 
 export interface IVelocity {
