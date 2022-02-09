@@ -5,7 +5,7 @@
         "ecmaVersion": 2019,
         "sourceType": "module"
     },
-    "ignorePatterns": ["node_modules", "*.d.ts"],
+    "ignorePatterns": ["node_modules", "*.d.ts", "build-tool"],
     "plugins": ["@typescript-eslint", "unused-imports", "prettier"],
     "extends": [
         "eslint:recommended",
